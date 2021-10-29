@@ -37,6 +37,7 @@ class SignUp extends Component {
         return (
             <Fragment>
                 <h3>Sign Up</h3>
+                <button onClick={signUp}>Test</button>
             </Fragment>
         )
     }
