@@ -35,7 +35,7 @@ class SignUp extends Component {
     }
 
     render () {
-        // const { email, password, passwordConfirmation } = this.state
+        const { email, password, passwordConfirmation } = this.state
 
         return (
             <Fragment>
