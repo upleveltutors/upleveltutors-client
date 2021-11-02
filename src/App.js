@@ -1,11 +1,15 @@
 // import logo from './logo.svg';
 // import './App.css';
 
-import SignUp from './components/SignUp/SignUp'
+import { Fragment } from 'react'
+import SignUp from "./components/SignUp/SignUp";
 
 function App() {
+
   return (
-      <SignUp/>
+    <Fragment>
+      <SignUp />
+    </Fragment>
   );
 }
 
