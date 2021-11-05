@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-// import { withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 
 import { signUp, signIn } from '../../api/auth'
 
@@ -30,7 +30,7 @@ class SignUp extends Component {
             .then(() => signIn(this.state))
             .then(res => setUser(res.data.user))
             .then(() => history.push('/'))
-            .catch(error => {
+            .catch(() => {
                 this.setState({ email: '', password: '', passwordConfirmation: ''})
             })
     }
@@ -89,4 +89,4 @@ class SignUp extends Component {
     }
 }
 
-export default SignUp
+export default withRouter(SignUp)
