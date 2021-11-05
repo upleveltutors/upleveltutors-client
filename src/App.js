@@ -4,6 +4,7 @@ import React, { Fragment, useState } from 'react'
 // import route from router dom
 import { Route } from 'react-router-dom'
 
+import AuthenticatedRoute from './components/AuthenticatedRoute/AuthenticatedRoute'
 // import Header from "./components/Header/Header"
 import SignUp from "./components/SignUp/SignUp";
 import SignIn from "./components/SignIn/SignIn"
