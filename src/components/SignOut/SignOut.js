@@ -4,8 +4,6 @@ import { withRouter } from 'react-router-dom'
 import { signOut } from '../../api/auth'
 
 class SignOut extends Component {
-    clearUser = () => this.setState({ user: null })
-    
     componentDidMount () {
         const { history, clearUser, user } = this.props
         
@@ -13,7 +11,7 @@ class SignOut extends Component {
             .finally(() => {
                 history.push('/')
             })
-            // .finally(() => clearUser())
+            .finally(() => clearUser())
     }
 
     render () {

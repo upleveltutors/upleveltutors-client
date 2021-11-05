@@ -32,7 +32,7 @@ class SignIn extends Component {
             })
             .then(() => history.push('/'))
             .catch(() => {
-                this.this.setState({ email: '', password: '' })
+                this.setState({ email: '', password: '' })
             })
     }
 

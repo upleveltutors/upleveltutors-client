@@ -9,6 +9,7 @@ import Header from "./components/Header/Header"
 import SignUp from "./components/SignUp/SignUp";
 import SignIn from "./components/SignIn/SignIn"
 import SignOut from "./components/SignOut/SignOut"
+import ChangePassword from "./components/ChangePassword/ChangePassword"
 
 class App extends Component {
   constructor (props) {
@@ -33,15 +34,18 @@ class App extends Component {
           <SignIn setUser={setUser} /> */}
           <main className="container">
             <Route exact path='/' />
-              <Route path='/sign-up' render={() => (
-                <SignUp setUser={this.setUser}/>
-              )} />
+            <Route path='/sign-up' render={() => (
+              <SignUp setUser={this.setUser}/>
+            )} />
             <Route path='/sign-in' render={() => (
               <SignIn setUser={this.setUser} />
             )} />
             <AuthenticatedRoute user={user} path='/sign-out' render={() => (
-              <SignOut user={user}/>
+              <SignOut clearUser={this.clearUser} user={user}/>
             )} />
+            <AuthenticatedRoute user={user} path='/change-password' render={() => (
+              <ChangePassword user={user}/>
+            )}/>
           </main>
         </Fragment>
     )
