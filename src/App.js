@@ -5,7 +5,7 @@ import React, { Fragment, useState } from 'react'
 import { Route } from 'react-router-dom'
 
 import AuthenticatedRoute from './components/AuthenticatedRoute/AuthenticatedRoute'
-// import Header from "./components/Header/Header"
+import Header from "./components/Header/Header"
 import SignUp from "./components/SignUp/SignUp";
 import SignIn from "./components/SignIn/SignIn"
 import SignOut from "./components/SignOut/SignOut"
@@ -18,12 +18,12 @@ function App() {
 
   return (
     <Fragment>
-      {/* <Header user={user}/> */}
+      <Header user={user}/>
       <Route path='/sign-up' render={() => {
         <SignUp setUser={setUser}/>
       }} />
       <Route path='/sign-in' render={() => (
-        <SignIn setUser={this.setUser} />
+        <SignIn setUser={setUser} />
       )} />
       <AuthenticatedRoute user={user} path='/sign-out' render={() => (
         <SignOut user={user}/>

@@ -39,8 +39,8 @@ class SignUp extends Component {
         const { email, password, passwordConfirmation } = this.state
 
         return (
-            <div>
-            <div>
+            <div className="row center mb-4">
+            <div className="col-sm-10 col-md-8 mx-auto">
                 <h3>Sign Up</h3>
                 <Form onSubmit={this.onSignUp}>
                     <Form.Group controlId="email">
